@@ -10,12 +10,14 @@ timer.py uses the time library to help keep track of time
 
 
 import time # The time library has a sleep function that will pause the script for a specifized amount of time
-import snaps # the snaps library makes it easy to display images and make sounds
+from PIL import Image # the pillow library makes it easy to display images 
+
+im = Image.open("times-up.jpeg")
 
 # ask user to enter desired countdown time
 set_time = int(input("Please set your timer in seconds: "))
 
 time.sleep(set_time)
 
-snaps.display_message("Time's up!!")
+im.show()
 
